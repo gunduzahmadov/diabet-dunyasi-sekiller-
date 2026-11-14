@@ -9,11 +9,16 @@ Səhnə növləri (hər biri ~3.5–5 san):
  {"type":"boxes","label":"...","items":[["96","nəfər"],["24","həftə"]],"text":"..."}   (2–3 qutu)
  {"type":"bars","label":"...","items":[["Qrup A",54,"54%"],["Qrup B",4,"4%"]],"text":"..."} (dəyər 0–100)
  {"type":"notes","label":"DİQQƏT","items":["...","..."],"closing":"Müalicənizi həkiminizlə məsləhətləşmədən dəyişməyin."}
-Son səhnə (Diabet Dünyası + mənbə + @diabet_dunyasi_news) avtomatik əlavə olunur.
+Son səhnə (brend adı + mənbə + handle) avtomatik əlavə olunur.
+Könüllü sahələr (başqa səhifələr üçün): "brand" (yuxarı sol və son səhnə başlığı, default «Diabet Dünyası qəzeti»),
+ "endTitle" (son səhnənin iri başlığı, default «Diabet Dünyası»), "handle" (default «@diabet_dunyasi_news»).
+ Məs.: {"brand":"Dr. Gündüz Əhmədov","endTitle":"Dr. Gündüz Əhmədov","handle":"@dr_endokrinoloq_gunduz_ahmedov"}
+       {"brand":"Uşaq Endokrinologiyası Cəmiyyəti","endTitle":"Azərbaycan Uşaq Endokrinologiyası Cəmiyyəti","handle":"@usaqendokrincemiyyet"}
 """
 import sys,json,base64,glob,html,os,subprocess,tempfile,shutil
 spec=json.load(open(sys.argv[1],encoding='utf8')); out=os.path.abspath(sys.argv[2]); F=sys.argv[3]
 E_=html.escape
+BRAND=spec.get('brand','Diabet Dünyası qəzeti'); ENDT=spec.get('endTitle','Diabet Dünyası'); HANDLE=spec.get('handle','@diabet_dunyasi_news')
 S=glob.glob(F+'/*serif*/package/files')[0]; N=glob.glob(F+'/*sans*/package/files')[0]
 def ff(fam,d,base,w):
     o=''
@@ -49,7 +54,7 @@ for s in spec['scenes']:
         dur=4.6
     else: raise SystemExit('naməlum səhnə: '+ty)
     dur=float(s.get('duration',dur)); parts.append((t,t+dur,h)); t+=dur
-h=f'<h1 class="up red" {d(.2)}>Diabet Dünyası</h1><p class=up {d(.6)}>Mənbə: {E_(spec["source"])}</p><div class="handle up" {d(1)}>@diabet_dunyasi_news</div>'
+h=f'<h1 class="up red" style="--d:.2s;font-size:{100 if len(ENDT)<20 else 76}px">{E_(ENDT)}</h1><p class=up {d(.6)}>Mənbə: {E_(spec["source"])}</p><div class="handle up" {d(1)}>{E_(HANDLE)}</div>'
 parts.append((t,t+3.4,h)); T=t+3.4
 scenes=''.join(f'<section data-s="{a}" data-e="{b}">{x}</section>' for a,b,x in parts)
 page=f'''<!doctype html><meta charset=utf8><style>{css}
@@ -75,9 +80,9 @@ p{{margin:0;font-size:46px;line-height:1.35;color:#2A2A2A}}
 .foot{{position:absolute;left:80px;right:80px;bottom:150px;display:flex;justify-content:space-between;font-size:30px;color:#333;border-top:2px solid #1A1A1A;padding-top:18px}}.foot b{{color:#1A1A1A}}
 .prog{{position:absolute;left:0;top:0;height:10px;background:#C8102E}}
 </style><div class=v><div class=prog></div>
-<div class=top><i>Diabet Dünyası qəzeti</i><u>{E_(spec["date"])}</u></div>
+<div class=top><i>{E_(BRAND)}</i><u>{E_(spec["date"])}</u></div>
 {scenes}
-<div class=foot><span>Məlumat xarakterlidir</span><b>@diabet_dunyasi_news</b></div></div>
+<div class=foot><span>Məlumat xarakterlidir</span><b>{E_(HANDLE)}</b></div></div>
 <script>
 const T={T};
 function ease(x){{return 1-Math.pow(1-Math.min(Math.max(x,0),1),3)}}
