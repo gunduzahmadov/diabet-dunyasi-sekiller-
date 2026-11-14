@@ -4,3 +4,5 @@
 2026-11-11 — [REELS] — Hər 9 böyükdən birində diabet var (Ümumdünya Diabet Günü, IDF Atlas) — https://media.idf.org/media/uploads/sites/3/2025/04/IDF_Atlas_11th_Edition_2025_Global-Factsheet.pdf
 2026-11-12 — [REELS] — GLP-1 dərmanını dayandırmaq riskli ola bilər? (İtaliya AMD kohortu) — https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762%2826%2900293-0/fulltext
 2026-11-13 — [REELS + COLLAB] — Uşaqlarda tip 1 diabet: yeni immunoterapiya (teplizumab, Diabetes Care tövsiyələri) — https://diabetesjournals.org/care/article/doi/10.2337/dci26-0061/172898/Clinical-Guidance-for-Disease-Modifying
+2026-11-14 — A — REELS — GLP-1 dərmanları və görmə: FDA xəbərdarlığı (NAION) — https://www.fda.gov/drugs/drug-safety-communications/fda-requires-safety-labeling-changes-glucagon-peptide-1-receptor-agonists-glp-1-ras-due-potential
+2026-11-14 — A→B/C paylaşım
