@@ -6,3 +6,5 @@
 2026-11-13 — [REELS + COLLAB] — Uşaqlarda tip 1 diabet: yeni immunoterapiya (teplizumab, Diabetes Care tövsiyələri) — https://diabetesjournals.org/care/article/doi/10.2337/dci26-0061/172898/Clinical-Guidance-for-Disease-Modifying
 2026-11-14 — A — REELS — GLP-1 dərmanları və görmə: FDA xəbərdarlığı (NAION) — https://www.fda.gov/drugs/drug-safety-communications/fda-requires-safety-labeling-changes-glucagon-peptide-1-receptor-agonists-glp-1-ras-due-potential
 2026-11-14 — A→B/C paylaşım
+2026-11-15 — A — REELS — ÜST böyüklərdə tip 1 diabet üçün ilk tövsiyələr — https://www.who.int/news/item/14-11-2026-who-issues-first-guidelines-on-type-1-diabetes-for-adults
+2026-11-15 — A→B/C paylaşım
