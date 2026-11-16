@@ -4,7 +4,7 @@
 FONTS_DIR: `npm pack @fontsource/noto-serif @fontsource/noto-sans` arxivlərinin açıldığı qovluq
 (içində */package/files olur).
 scenes.json: {"date":"8 NOYABR 2026","rubric":"HƏFTƏNİN YENİLİYİ","source":"...","scenes":[...]}
-Səhnə növləri (müddət mətnin uzunluğuna görə avtomatik: ~15 simvol/san + 2 san fasilə, ən az 4–5 san):
+Səhnə növləri (müddət mətnin uzunluğuna görə avtomatik: ~20 simvol/san + 1 san fasilə, ən az 3–4 san):
  {"type":"title","title":"...","accent":"başlıqda qırmızı söz(lər)","sub":"..."}
  {"type":"boxes","label":"...","items":[["96","nəfər"],["24","həftə"]],"text":"..."}   (2–3 qutu)
  {"type":"bars","label":"...","items":[["Qrup A",54,"54%"],["Qrup B",4,"4%"]],"text":"..."} (dəyər 0–100)
@@ -28,13 +28,13 @@ def ff(fam,d,base,w):
     return o
 css=ff('NSerif',S,'noto-serif',900)+ff('NSans',N,'noto-sans',400)+ff('NSans',N,'noto-sans',700)
 def d(x): return f'style="--d:{x}s"'
-# Oxuma vaxtı: səhnədəki bütün mətnin rahat oxunması üçün ~15 simvol/san + 2 san fasilə
-READ_CPS=15; HOLD=2.0
+# Oxuma vaxtı: ~20 simvol/san + 1 san fasilə (16.11.2026: istifadəçi istəyi ilə sürətləndirildi; əvvəl 15 simvol/san + 2 san)
+READ_CPS=20; HOLD=1.0
 def read_time(s):
     txt=[s.get(k,'') for k in ('title','sub','label','text','closing')]
     for it in s.get('items',[]):
         txt+= [str(x) for x in it] if isinstance(it,(list,tuple)) else [str(it)]
-    return 0.5+len(''.join(txt))/READ_CPS+HOLD
+    return 0.3+len(''.join(txt))/READ_CPS+HOLD
 parts=[];t=0
 for s in spec['scenes']:
     ty=s['type']
@@ -43,26 +43,26 @@ for s in spec['scenes']:
         if ac and ac in s['title']: ti=ti.replace(E_(ac),f'<em>{E_(ac)}</em>')
         h=f'<div class=pill {d(.2)}>{E_(spec.get("rubric","HƏFTƏNİN YENİLİYİ"))}</div><h1 class=up {d(.5)}>{ti}</h1>'
         if s.get('sub'): h+=f'<p class=up {d(1.3)}>{E_(s["sub"])}</p>'
-        dur=4.2
+        dur=3.2
     elif ty=='boxes':
         h=f'<div class=k {d(.1)}>{E_(s["label"])}</div><div class=row>'+''.join(f'<div class="box up{" dim" if i>0 and s.get("dimRest") else ""}" {d(.3+.3*i)}><b>{E_(a)}</b><span>{E_(b)}</span></div>' for i,(a,b) in enumerate(s['items']))+'</div>'
         if s.get('text'): h+=f'<p class=up {d(.4+.3*len(s["items"]))}>{E_(s["text"])}</p>'
-        dur=4.2
+        dur=3.2
     elif ty=='bars':
         h=f'<div class=k {d(.1)}>{E_(s["label"])}</div>'
         for i,(lab,v,txt) in enumerate(s['items']):
             g=' g' if i>0 else ''
             h+=f'<div class=bar><span class=lab>{E_(lab)}</span><div class=tr><i class="fill{g}" style="--w:{max(0,min(100,float(v)))}%;--d:{.4+.4*i}s"></i></div><b class="num{g} up" {d(1.4+.2*i)}>{E_(txt)}</b></div>'
         if s.get('text'): h+=f'<p class=up {d(2.2)}>{E_(s["text"])}</p>'
-        dur=5
+        dur=4
     elif ty=='notes':
-        h=f'<div class=k {d(.1)}>{E_(s.get("label","DİQQƏT"))}</div>'+''.join(f'<div class="note up" {d(.3+.7*i)}>{E_(x)}</div>' for i,x in enumerate(s['items']))
-        h+=f'<h2 class=up {d(.4+.7*len(s["items"]))}>{E_(s.get("closing","Müalicənizi həkiminizlə məsləhətləşmədən dəyişməyin."))}</h2>'
-        dur=4.6
+        h=f'<div class=k {d(.1)}>{E_(s.get("label","DİQQƏT"))}</div>'+''.join(f'<div class="note up" {d(.3+.5*i)}>{E_(x)}</div>' for i,x in enumerate(s['items']))
+        h+=f'<h2 class=up {d(.4+.5*len(s["items"]))}>{E_(s.get("closing","Müalicənizi həkiminizlə məsləhətləşmədən dəyişməyin."))}</h2>'
+        dur=3.6
     else: raise SystemExit('naməlum səhnə: '+ty)
     dur=max(dur,read_time(s)); dur=float(s.get('duration',dur)); parts.append((t,t+dur,h)); t+=dur
 h=f'<h1 class="up red" style="--d:.2s;font-size:{100 if len(ENDT)<20 else 76}px">{E_(ENDT)}</h1><p class=up {d(.6)}>Mənbə: {E_(spec["source"])}</p><div class="handle up" {d(1)}>{E_(HANDLE)}</div>'
-parts.append((t,t+4.5,h)); T=t+4.5
+parts.append((t,t+3.5,h)); T=t+3.5
 scenes=''.join(f'<section data-s="{a}" data-e="{b}">{x}</section>' for a,b,x in parts)
 page=f'''<!doctype html><meta charset=utf8><style>{css}
 *{{box-sizing:border-box}}body{{margin:0}}
