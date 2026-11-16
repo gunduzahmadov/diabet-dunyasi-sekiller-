@@ -8,3 +8,6 @@
 2026-11-14 — A→B/C paylaşım
 2026-11-15 — A — REELS — ÜST böyüklərdə tip 1 diabet üçün ilk tövsiyələr — https://www.who.int/news/item/14-11-2026-who-issues-first-guidelines-on-type-1-diabetes-for-adults
 2026-11-15 — A→B/C paylaşım
+2026-11-16 — A — REELS — Diabet və göz: ildə bir müayinə (diabetlə bağlı göz xəstəlikləri ayı) — https://ajmc.com/view/5-things-to-know-about-diabetes-related-eye-disease-awareness-month
+2026-11-16 — C — REELS — SGA uşaqlarda həftəlik boy hormonu: 2 il (somapasitan, REAL8/REAL9) — https://www.healio.com/news/endocrinology/20261109/sogroya-improves-growth-for-up-to-2-years-in-children-born-small-for-gestational-age
+2026-11-16 — A→B paylaşım
