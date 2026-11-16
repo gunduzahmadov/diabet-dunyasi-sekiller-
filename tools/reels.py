@@ -4,7 +4,7 @@
 FONTS_DIR: `npm pack @fontsource/noto-serif @fontsource/noto-sans` arxivlərinin açıldığı qovluq
 (içində */package/files olur).
 scenes.json: {"date":"8 NOYABR 2026","rubric":"HƏFTƏNİN YENİLİYİ","source":"...","scenes":[...]}
-Səhnə növləri (hər biri ~3.5–5 san):
+Səhnə növləri (müddət mətnin uzunluğuna görə avtomatik: ~15 simvol/san + 2 san fasilə, ən az 4–5 san):
  {"type":"title","title":"...","accent":"başlıqda qırmızı söz(lər)","sub":"..."}
  {"type":"boxes","label":"...","items":[["96","nəfər"],["24","həftə"]],"text":"..."}   (2–3 qutu)
  {"type":"bars","label":"...","items":[["Qrup A",54,"54%"],["Qrup B",4,"4%"]],"text":"..."} (dəyər 0–100)
@@ -28,6 +28,13 @@ def ff(fam,d,base,w):
     return o
 css=ff('NSerif',S,'noto-serif',900)+ff('NSans',N,'noto-sans',400)+ff('NSans',N,'noto-sans',700)
 def d(x): return f'style="--d:{x}s"'
+# Oxuma vaxtı: səhnədəki bütün mətnin rahat oxunması üçün ~15 simvol/san + 2 san fasilə
+READ_CPS=15; HOLD=2.0
+def read_time(s):
+    txt=[s.get(k,'') for k in ('title','sub','label','text','closing')]
+    for it in s.get('items',[]):
+        txt+= [str(x) for x in it] if isinstance(it,(list,tuple)) else [str(it)]
+    return 0.5+len(''.join(txt))/READ_CPS+HOLD
 parts=[];t=0
 for s in spec['scenes']:
     ty=s['type']
@@ -53,9 +60,9 @@ for s in spec['scenes']:
         h+=f'<h2 class=up {d(.4+.7*len(s["items"]))}>{E_(s.get("closing","Müalicənizi həkiminizlə məsləhətləşmədən dəyişməyin."))}</h2>'
         dur=4.6
     else: raise SystemExit('naməlum səhnə: '+ty)
-    dur=float(s.get('duration',dur)); parts.append((t,t+dur,h)); t+=dur
+    dur=max(dur,read_time(s)); dur=float(s.get('duration',dur)); parts.append((t,t+dur,h)); t+=dur
 h=f'<h1 class="up red" style="--d:.2s;font-size:{100 if len(ENDT)<20 else 76}px">{E_(ENDT)}</h1><p class=up {d(.6)}>Mənbə: {E_(spec["source"])}</p><div class="handle up" {d(1)}>{E_(HANDLE)}</div>'
-parts.append((t,t+3.4,h)); T=t+3.4
+parts.append((t,t+4.5,h)); T=t+4.5
 scenes=''.join(f'<section data-s="{a}" data-e="{b}">{x}</section>' for a,b,x in parts)
 page=f'''<!doctype html><meta charset=utf8><style>{css}
 *{{box-sizing:border-box}}body{{margin:0}}
