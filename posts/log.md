@@ -11,3 +11,6 @@
 2026-11-16 — A — REELS — Diabet və göz: ildə bir müayinə (diabetlə bağlı göz xəstəlikləri ayı) — https://ajmc.com/view/5-things-to-know-about-diabetes-related-eye-disease-awareness-month
 2026-11-16 — C — REELS — SGA uşaqlarda həftəlik boy hormonu: 2 il (somapasitan, REAL8/REAL9) — https://www.healio.com/news/endocrinology/20261109/sogroya-improves-growth-for-up-to-2-years-in-children-born-small-for-gestational-age
 2026-11-16 — A→B paylaşım
+2026-11-17 — A — REELS — Yeniyetmələrdə piylənmə: tirzepatid sınağı (SURMOUNT-ADOLESCENTS, JAMA) — https://jamanetwork.com/journals/jama/fullarticle/2856796
+2026-11-17 — B — REELS — Erkən cinsi inkişaf: valideynlər nəyə diqqət etməli (Endocrine Society) — https://www.endocrine.org/patient-engagement/endocrine-library/precocious-puberty
+2026-11-17 — A→C paylaşım
