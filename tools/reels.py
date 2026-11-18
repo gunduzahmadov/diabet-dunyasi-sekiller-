@@ -12,13 +12,18 @@ Səhnə növləri (müddət mətnin uzunluğuna görə avtomatik: ~20 simvol/san
 Son səhnə (brend adı + mənbə + handle) avtomatik əlavə olunur.
 Könüllü sahələr (başqa səhifələr üçün): "brand" (yuxarı sol və son səhnə başlığı, default «Diabet Dünyası qəzeti»),
  "endTitle" (son səhnənin iri başlığı, default «Diabet Dünyası»), "handle" (default «@diabet_dunyasi_news»).
- Məs.: {"brand":"Dr. Gündüz Əhmədov","endTitle":"Dr. Gündüz Əhmədov","handle":"@dr_endokrinoloq_gunduz_ahmedov"}
+ "theme": "red" (default, #C8102E) və ya "blue" (göy-mavi: açıq fonda #1E6FD9, tünd bloklarda #6FB1FF).
+ Brand «Dr. Gündüz Əhmədov» olanda tema avtomatik "blue" olur (19.11.2026-dan, B səhifəsi); A və C qırmızı qalır.
+ Məs.: {"brand":"Dr. Gündüz Əhmədov","endTitle":"Dr. Gündüz Əhmədov","handle":"@dr_endokrinoloq_gunduz_ahmedov","theme":"blue"}
        {"brand":"Uşaq Endokrinologiyası Cəmiyyəti","endTitle":"Azərbaycan Uşaq Endokrinologiyası Cəmiyyəti","handle":"@usaqendokrincemiyyet"}
 """
 import sys,json,base64,glob,html,os,subprocess,tempfile,shutil
 spec=json.load(open(sys.argv[1],encoding='utf8')); out=os.path.abspath(sys.argv[2]); F=sys.argv[3]
 E_=html.escape
 BRAND=spec.get('brand','Diabet Dünyası qəzeti'); ENDT=spec.get('endTitle','Diabet Dünyası'); HANDLE=spec.get('handle','@diabet_dunyasi_news')
+THEMES={'red':('#C8102E','#FF8A8A'),'blue':('#1E6FD9','#6FB1FF')}
+THEME=spec.get('theme','blue' if BRAND=='Dr. Gündüz Əhmədov' else 'red')
+ACC,ACC_DARK=THEMES.get(THEME,THEMES['red'])  # ACC: açıq fonda vurğu; ACC_DARK: tünd bloklarda vurğu
 S=glob.glob(F+'/*serif*/package/files')[0]; N=glob.glob(F+'/*sans*/package/files')[0]
 def ff(fam,d,base,w):
     o=''
@@ -68,24 +73,24 @@ page=f'''<!doctype html><meta charset=utf8><style>{css}
 *{{box-sizing:border-box}}body{{margin:0}}
 .v{{width:1080px;height:1920px;background:#FBF8F2;color:#1A1A1A;font-family:NSans;position:relative;overflow:hidden}}
 .top{{position:absolute;left:80px;right:80px;top:150px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:4px solid #1A1A1A;padding-bottom:22px}}
-.top i{{font:900 48px NSerif;color:#C8102E;font-style:normal}}.top u{{text-decoration:none;font-weight:700;font-size:30px;letter-spacing:.05em}}
+.top i{{font:900 48px NSerif;color:{ACC};font-style:normal}}.top u{{text-decoration:none;font-weight:700;font-size:30px;letter-spacing:.05em}}
 section{{position:absolute;left:80px;right:80px;top:330px;bottom:300px;display:flex;flex-direction:column;justify-content:center;gap:44px;opacity:0}}
-.pill{{align-self:flex-start;background:#C8102E;color:#fff;font-weight:700;font-size:36px;letter-spacing:.06em;padding:12px 36px;border-radius:999px}}
-h1{{margin:0;font:900 100px/1.08 NSerif}}h1 em{{font-style:normal;color:#C8102E}}.red{{color:#C8102E}}
+.pill{{align-self:flex-start;background:{ACC};color:#fff;font-weight:700;font-size:36px;letter-spacing:.06em;padding:12px 36px;border-radius:999px}}
+h1{{margin:0;font:900 100px/1.08 NSerif}}h1 em{{font-style:normal;color:{ACC}}}.red{{color:{ACC}}}
 h2{{margin:0;font:900 64px/1.15 NSerif}}
 p{{margin:0;font-size:46px;line-height:1.35;color:#2A2A2A}}
-.k{{font-weight:700;font-size:40px;letter-spacing:.1em;color:#C8102E}}
+.k{{font-weight:700;font-size:40px;letter-spacing:.1em;color:{ACC}}}
 .row{{display:flex;flex-direction:column;gap:28px}}
 .box{{border:4px solid #1A1A1A;padding:26px 34px;display:flex;align-items:baseline;gap:28px;flex-wrap:wrap}}
-.box b{{font:900 120px/1 NSerif;color:#C8102E}}.box span{{font-size:46px}}.box.dim b{{color:#5B524E}}
+.box b{{font:900 120px/1 NSerif;color:{ACC}}}.box span{{font-size:46px}}.box.dim b{{color:#5B524E}}
 .bar{{display:grid;grid-template-columns:1fr auto;gap:14px 24px;align-items:center}}
 .lab{{grid-column:1/3;font-size:42px;font-weight:700}}
-.tr{{height:70px;background:#EDE6DC}}.fill{{display:block;height:100%;width:0;background:#C8102E}}.fill.g{{background:#5B524E}}
-.num{{font:900 110px/1 NSerif;color:#C8102E;min-width:250px;text-align:right}}.num.g{{color:#5B524E}}
-.note{{border-left:12px solid #C8102E;padding-left:30px;font-size:46px;line-height:1.35}}
-.handle{{font-weight:700;font-size:64px}}
+.tr{{height:70px;background:#EDE6DC}}.fill{{display:block;height:100%;width:0;background:{ACC}}}.fill.g{{background:#5B524E}}
+.num{{font:900 110px/1 NSerif;color:{ACC};min-width:250px;text-align:right}}.num.g{{color:#5B524E}}
+.note{{border-left:12px solid {ACC};padding-left:30px;font-size:46px;line-height:1.35}}
+.handle{{font-weight:700;font-size:{64 if len(HANDLE)<=22 else 44}px;overflow-wrap:anywhere}}
 .foot{{position:absolute;left:80px;right:80px;bottom:150px;display:flex;justify-content:space-between;font-size:30px;color:#333;border-top:2px solid #1A1A1A;padding-top:18px}}.foot b{{color:#1A1A1A}}
-.prog{{position:absolute;left:0;top:0;height:10px;background:#C8102E}}
+.prog{{position:absolute;left:0;top:0;height:10px;background:{ACC}}}
 </style><div class=v><div class=prog></div>
 <div class=top><i>{E_(BRAND)}</i><u>{E_(spec["date"])}</u></div>
 {scenes}
