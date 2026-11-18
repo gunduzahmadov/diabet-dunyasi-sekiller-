@@ -14,3 +14,4 @@
 2026-11-17 — A — REELS — Yeniyetmələrdə piylənmə: tirzepatid sınağı (SURMOUNT-ADOLESCENTS, JAMA) — https://jamanetwork.com/journals/jama/fullarticle/2856796
 2026-11-17 — B — REELS — Erkən cinsi inkişaf: valideynlər nəyə diqqət etməli (Endocrine Society) — https://www.endocrine.org/patient-engagement/endocrine-library/precocious-puberty
 2026-11-17 — A→C paylaşım
+2026-11-18 — A — REELS — Tip 2 diabet və Alzheimer riski (40 tədqiqatın meta-analizi) — https://www.eurekalert.org/news-releases/1151585
