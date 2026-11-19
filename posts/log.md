@@ -15,3 +15,6 @@
 2026-11-17 — B — REELS — Erkən cinsi inkişaf: valideynlər nəyə diqqət etməli (Endocrine Society) — https://www.endocrine.org/patient-engagement/endocrine-library/precocious-puberty
 2026-11-17 — A→C paylaşım
 2026-11-18 — A — REELS — Tip 2 diabet və Alzheimer riski (40 tədqiqatın meta-analizi) — https://www.eurekalert.org/news-releases/1151585
+2026-11-19 — A — REELS — Diabetik ayaq yarası: sağalmanı erkən proqnozlaşdırmaq (THERMUL, termal görüntü + Sİ) — https://www.rmit.edu.au/news/all-news/2026/nov/thermul-study
+2026-11-19 — C — REELS — Hipotalamik piylənmə: setmelanotid 2 ildə (TRANSCEND OLE, ObesityWeek 2026) — https://www.healio.com/news/endocrinology/20261117/setmelanotide-shows-benefit-in-acquired-hypothalamic-obesity-at-2-years
+2026-11-19 — A→B paylaşım
