@@ -18,3 +18,7 @@
 2026-11-19 — A — REELS — Diabetik ayaq yarası: sağalmanı erkən proqnozlaşdırmaq (THERMUL, termal görüntü + Sİ) — https://www.rmit.edu.au/news/all-news/2026/nov/thermul-study
 2026-11-19 — C — REELS — Hipotalamik piylənmə: setmelanotid 2 ildə (TRANSCEND OLE, ObesityWeek 2026) — https://www.healio.com/news/endocrinology/20261117/setmelanotide-shows-benefit-in-acquired-hypothalamic-obesity-at-2-years
 2026-11-19 — A→B paylaşım
+2026-11-20 — A — REELS — Lokdaun və uşaqlarda tip 1 diabet (Finlandiya, PLOS Medicine) — https://www.eurekalert.org/news-releases/1152403
+2026-11-20 — B — REELS — Uşaqda tiroid çatışmazlığı: nəyə baxmalı? (ATA, AAP) — https://www.thyroid.org/hypothyroidism-children-adolescents/
+2026-11-20 — A→B/C paylaşım
+2026-11-20 — A→TikTok
