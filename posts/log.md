@@ -22,3 +22,6 @@
 2026-11-20 — B — REELS — Uşaqda tiroid çatışmazlığı: nəyə baxmalı? (ATA, AAP) — https://www.thyroid.org/hypothyroidism-children-adolescents/
 2026-11-20 — A→B/C paylaşım
 2026-11-20 — A→TikTok
+2026-11-21 — A — REELS — Pankreasdakı yağı pəhriz azalda bilərmi? (DIRECT-PLUS, AJCN) — https://www.eurekalert.org/news-releases/1151661
+2026-11-21 — A→B/C paylaşım
+2026-11-21 — A→TikTok
