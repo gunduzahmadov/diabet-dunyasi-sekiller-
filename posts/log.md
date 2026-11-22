@@ -25,3 +25,6 @@
 2026-11-21 — A — REELS — Pankreasdakı yağı pəhriz azalda bilərmi? (DIRECT-PLUS, AJCN) — https://www.eurekalert.org/news-releases/1151661
 2026-11-21 — A→B/C paylaşım
 2026-11-21 — A→TikTok
+2026-11-22 — A — REELS — Tip 1 diabetdə immun hücumu nə davam etdirir? (kök hüceyrəyəbənzər T hüceyrələr, JCI) — https://news4jax.com/health/2026/11/20/uf-researchers-discover-what-may-be-driving-the-immune-system-to-keep-attacking-in-type-1-diabetes
+2026-11-22 — A→B/C paylaşım
+2026-11-22 — A→TikTok
