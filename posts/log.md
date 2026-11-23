@@ -28,3 +28,7 @@
 2026-11-22 — A — REELS — Tip 1 diabetdə immun hücumu nə davam etdirir? (kök hüceyrəyəbənzər T hüceyrələr, JCI) — https://news4jax.com/health/2026/11/20/uf-researchers-discover-what-may-be-driving-the-immune-system-to-keep-attacking-in-type-1-diabetes
 2026-11-22 — A→B/C paylaşım
 2026-11-22 — A→TikTok
+2026-11-23 — A — REELS — Mədə əməliyyatından sonra şəkər düşməsi: avexitid faza 3 (LUCIDITY, ObesityWeek 2026) — https://endocrinenews.endocrine.org/pharma-friday-november-21-2026/
+2026-11-23 — C — REELS — Turner sindromu: həftəlik somapasitana FDA təsdiqi (REAL8) — https://www.contemporarypediatrics.com/view/fda-approves-once-weekly-somapacitan-for-children-with-turner-syndrome
+2026-11-23 — A→B paylaşım
+2026-11-23 — A→TikTok
