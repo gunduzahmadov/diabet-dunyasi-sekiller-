@@ -32,3 +32,7 @@
 2026-11-23 — C — REELS — Turner sindromu: həftəlik somapasitana FDA təsdiqi (REAL8) — https://www.contemporarypediatrics.com/view/fda-approves-once-weekly-somapacitan-for-children-with-turner-syndrome
 2026-11-23 — A→B paylaşım
 2026-11-23 — A→TikTok
+2026-11-24 — A — REELS — Yataq otağında təmiz hava və qan şəkəri (HEPA sınağı, AHA 2026 tezisi) — https://www.eurekalert.org/news-releases/1150360
+2026-11-24 — B — REELS — Gecikmiş cinsi inkişaf: valideynlər nəyə diqqət etməli (KidsHealth, Johns Hopkins) — https://kidshealth.org/en/parents/delayed-puberty.html
+2026-11-24 — A→C paylaşım
+2026-11-24 — A→TikTok
