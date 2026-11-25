@@ -36,3 +36,5 @@
 2026-11-24 — B — REELS — Gecikmiş cinsi inkişaf: valideynlər nəyə diqqət etməli (KidsHealth, Johns Hopkins) — https://kidshealth.org/en/parents/delayed-puberty.html
 2026-11-24 — A→C paylaşım
 2026-11-24 — A→TikTok
+2026-11-25 — A — REELS — Diabet boşqabı: süfrəni necə bölək? (ADA/CDC boşqab üsulu, maarifləndirmə) — https://cdc.gov/diabetes/healthy-eating/diabetes-meal-planning.html
+2026-11-25 — A→TikTok
