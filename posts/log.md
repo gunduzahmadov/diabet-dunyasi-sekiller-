@@ -38,3 +38,7 @@
 2026-11-24 — A→TikTok
 2026-11-25 — A — REELS — Diabet boşqabı: süfrəni necə bölək? (ADA/CDC boşqab üsulu, maarifləndirmə) — https://cdc.gov/diabetes/healthy-eating/diabetes-meal-planning.html
 2026-11-25 — A→TikTok
+2026-11-26 — A — REELS — Qan şəkəri beyinə erkən təsir edir? (CARDIA, 30 il, JAHA 2026) — https://newsroom.heart.org/news/elevated-blood-sugar-levels-over-decades-linked-to-worse-midlife-memory-cognitive-function
+2026-11-26 — C — REELS — Mərkəzi erkən pubertat: Endocrine Society klinik təlimatı (JCEM 2026, 9 təklif) — https://www.endocrine.org/news-and-advocacy/news-room/2026/not-all-children-with-early-puberty-need-the-same-level-of-testing-or-treatment
+2026-11-26 — A→B paylaşım
+2026-11-26 — A→TikTok
