@@ -42,3 +42,7 @@
 2026-11-26 — C — REELS — Mərkəzi erkən pubertat: Endocrine Society klinik təlimatı (JCEM 2026, 9 təklif) — https://www.endocrine.org/news-and-advocacy/news-room/2026/not-all-children-with-early-puberty-need-the-same-level-of-testing-or-treatment
 2026-11-26 — A→B paylaşım
 2026-11-26 — A→TikTok
+2026-11-27 — A — REELS — Tip 2 diabet: remissiya mümkündür? (RESET for Remission, Lancet Reg Health Americas) — https://le.ac.uk/news/2026/october/diabetes-diet-study-leicester-lancet
+2026-11-27 — B — REELS — Uşağın boyu: nə vaxt narahat olmalı? (AAP, HealthyChildren.org) — https://www.healthychildren.org/English/health-issues/conditions/Glands-Growth-Disorders/Pages/When-a-Child-is-Unusually-Short.aspx
+2026-11-27 — A→C paylaşım
+2026-11-27 — A→TikTok
